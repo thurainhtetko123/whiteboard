@@ -44,7 +44,7 @@ function Whiteboard(props) {
       context.lineWidth = 20;
     }
     context.lineCap = "round";
-    context.strokeStyle = "black";
+    context.strokeStyle = "white";
     context.lineCap = "round";
     context.lineJoin = "round";
     contextRef.current = context;
