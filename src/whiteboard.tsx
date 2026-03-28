@@ -41,7 +41,7 @@ function Whiteboard(props: ToolProps) {
 
   const [clickedPosition, setClickedPosition] = useState({ x: 0, y: 0 });
 
-  const clickedLocation = (event) => {
+  const clickedLocation = (event: React.MouseEvent<HTMLCanvasElement>) => {
     const { clientX, clientY } = event;
     const canvas = canvasRef.current;
     if (!canvas) return;
