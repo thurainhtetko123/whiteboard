@@ -1,6 +1,7 @@
 import { Pencil, Eraser, Download, SunMoon } from "lucide-react";
+import type { ToolProps } from "./types";
 
-function Sidebar(props) {
+function Sidebar(props: ToolProps) {
   return (
     <aside id="sidebar" className="sidebar">
       <nav>
@@ -25,7 +26,7 @@ function Sidebar(props) {
           onClick={() => props.setActiveTool("Input")}
           title="Color"
         >
-          <input type="color" className="colorInput" />
+          <input type="color" className="colorInput" value={props.colorValue} onChange={(e) => props.setColorValue(e.target.value)}/>
           <span className="srOnly">Eraser</span>
         </div>
         <div
